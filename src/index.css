@@ -29,3 +29,17 @@
     justify-content: center;
     align-items: center;
 }
+
+.map{
+    width: 200px;
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+    position: "relative"
+}
+
+.marker{
+    width: 10px;
+    aspect-ratio: 1/1;
+    background: black;
+    position: absolute;
+}
