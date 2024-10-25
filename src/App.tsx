@@ -1,21 +1,14 @@
 import { useEffect, useState } from "react"
-import DessertCard from "./components/DessertCard"
-import { DessertCardProp } from "./components/DessertCard"
+import Textbox from "./components/Textbox"
+import Rotate from "./components/Rotate"
+import Gombok from "./components/Gombok"
 
 function App() {
-  const [desserts, setDesserts] = useState<DessertCardProp[]>([])
-
-  useEffect(() => {
-    fetch("data.json")
-    .then(res => res.json())
-    .then(fetchDessert => setDesserts(fetchDessert))
-  },[])
-
   return (
     <>
-      <section className="desserts">
-        {desserts.map(dessert => <DessertCard {...dessert} />)}
-      </section>
+      <Textbox/>
+      <Rotate/>
+      <Gombok/>
     </>
   )
 }
